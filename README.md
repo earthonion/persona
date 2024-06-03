@@ -20,11 +20,16 @@ Password : ZYkrL6P9GDDs (entropy: 71.45)
 ```
 
 ## usage:
-
-to generate 10 identities type: 
+```
+git clone https://github.com/earthonion/persona/
+cd persona
+chmod +x install.sh
+./install.sh
+```
+then to generate 10 identities type: 
 
 ```
-python persona.py 10
+persona 10
 ```
 
 for anon email go to https://guerrillamail.com and change the inbox ID to the one given in the output. eg. "TJqruYEq" from the example
