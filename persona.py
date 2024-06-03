@@ -5,17 +5,17 @@ import sys
 import entropy
 
 def male_firstname():
-    f = open('male-first-names.txt', 'r')
+    f = open('/usr/share/persona/male-first-names.txt', 'r')
     names= f.read().split()
     return random.choice(names).capitalize()
     
 def female_firstname():
-    f = open('female-first-name!.txt', 'r')
+    f = open('/usr/share/persona/female-first-names.txt', 'r')
     names= f.read().split()
     return random.choice(names).capitalize()
     
 def lastname():
-    f= open('last-names.txt', 'r')
+    f= open('/usr/share/persona/last-names.txt', 'r')
     names= f.read().split()
     return random.choice(names).capitalize()
     
@@ -33,8 +33,8 @@ def email_address():
  
  
 def username():
-	noun = random.choice(open('nouns.txt', 'r').read().split()).capitalize()
-	adjective = random.choice(open('adjectives.txt', 'r').read().split()).capitalize()
+	noun = random.choice(open('/usr/share/persona/nouns.txt', 'r').read().split()).capitalize()
+	adjective = random.choice(open('/usr/share/persona/adjectives.txt', 'r').read().split()).capitalize()
 	num = random.choice([str(random.randint(0,9999)),''])
 	return adjective+noun+num
 	
