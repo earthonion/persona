@@ -2,12 +2,13 @@
 An identity generator for making anon accounts online
 
 
-# example output:
+## example output:
 
 ```
 Name: Marc Calvino
 Gender: M
 Username: StraightSpectator
+Anon Email: TJqruYEq@guerrillamailblock.com
 Password : ZYkrL6P9GDDs (entropy: 71.45)
 
 3 random strings:
@@ -18,22 +19,21 @@ Password : ZYkrL6P9GDDs (entropy: 71.45)
 --------------------
 ```
 
-# usage:
+## usage:
 
 ```
-#python persona.py [num_of_identities]
-
 python persona.py 10 #outputs 10 identites
 ```
+if you want to use anon email go to https://guerrillamail.com and change the inbox ID to the one given in the output.
 
-# todo:
+*protip: check out https://quackr.io/ for anon phone numbers (like guerrilla mail)*
 
-• generate anon email (using guerrilla mail)
+## todo:
 
 • use secrets for password generation
 
 • organize code more
 
-# note:
+### note:
 
 name files and nouns and adjective files were found on GitHub. ill have to remember which and give them credit. 
