@@ -29,8 +29,11 @@ python persona.py 10 #outputs 10 identites
 # todo:
 
 • generate anon email (using guerrilla mail)
+
+• use secrets for password generation
+
 • organize code more
 
 # note:
 
-name files and nouns and adjective files were found lon GitHub. ill have to remember which and give them credit. 
+name files and nouns and adjective files were found on GitHub. ill have to remember which and give them credit. 
