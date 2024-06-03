@@ -39,9 +39,6 @@ for anon email go to https://guerrillamail.com and change the inbox ID to the on
 ## todo:
 
 - use secrets for password generation
-
-- make an install script so simply `persona` can be run from terminal
-
 - organize code more
 
 ### note:
