@@ -24,7 +24,7 @@ Password : ZYkrL6P9GDDs (entropy: 71.45)
 git clone https://github.com/earthonion/persona/
 cd persona
 chmod +x install.sh
-./install.sh
+sudo bash install.sh
 ```
 then to generate 10 identities type: 
 
