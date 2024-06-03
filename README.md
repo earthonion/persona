@@ -21,10 +21,13 @@ Password : ZYkrL6P9GDDs (entropy: 71.45)
 
 ## usage:
 
+to generate 10 identities type: 
+
 ```
 python persona.py 10
 ```
-if you want to use anon email go to https://guerrillamail.com and change the inbox ID to the one given in the output.
+
+for anon email go to https://guerrillamail.com and change the inbox ID to the one given in the output. eg. "TJqruYEq" from the example
 
 *protip: check out https://quackr.io/ for anon phone numbers (like guerrilla mail)*
 
