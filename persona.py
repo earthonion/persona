@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random
 import string
 import sys
@@ -9,7 +10,7 @@ def male_firstname():
     return random.choice(names).capitalize()
     
 def female_firstname():
-    f = open('female-first-names.txt', 'r')
+    f = open('female-first-name!.txt', 'r')
     names= f.read().split()
     return random.choice(names).capitalize()
     
