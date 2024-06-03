@@ -22,7 +22,7 @@ Password : ZYkrL6P9GDDs (entropy: 71.45)
 ## usage:
 
 ```
-python persona.py 10 #outputs 10 identites
+python persona.py 10
 ```
 if you want to use anon email go to https://guerrillamail.com and change the inbox ID to the one given in the output.
 
@@ -30,9 +30,11 @@ if you want to use anon email go to https://guerrillamail.com and change the inb
 
 ## todo:
 
-• use secrets for password generation
+- use secrets for password generation
 
-• organize code more
+- make an install script so simply `persona` can be run from terminal
+
+- organize code more
 
 ### note:
 
