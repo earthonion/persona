@@ -38,6 +38,22 @@ def username():
 	return adjective+noun+num
 	
 	
+def anon_email(user=None):
+	user = password(8, False) if not user else user
+	domains = ['sharklasers.com',
+						'grr.la',
+						'guerrillamail.info',
+						'guerrillamail.biz',
+						'guerrillamail.com',
+						'guerrillamail.de',
+						'guerrillamail.net',
+						'guerrillamail.org',
+						'guerrillamailblock.com',
+						'pokemail.net',
+						'spam4.me']
+	return f'{user}@{random.choice(domains)}'
+	
+	
 def password(length, symbols = True):
     pw = ''
     letters = string.ascii_letters+string.digits +  string.punctuation if symbols else string.ascii_letters+string.digits
@@ -54,10 +70,11 @@ def persona():
     print(f'Name: {name}')
     print(f'Gender: {sex.upper()}')
     print(f'Username: {username()}')
+    print(f'Anon Email: {anon_email()}')
     pswd = password(random.randrange(10,32),False)
     print(f'Password : {pswd} (entropy: {entropy.entropy(pswd):.2f})')
     #print(f'Password: {password(18, False)}')
-    num_str = 20
+    num_str = 3
     print(f'\n{num_str} random strings:\n')
     for s in range(num_str):
     	pw = password(random.randint(12, 50), random.choice([0,1]))
