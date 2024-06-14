@@ -36,7 +36,7 @@ for anon email go to https://guerrillamail.com and change the inbox ID to the on
 
 *protip: check out https://quackr.io/ for anon phone numbers (like guerrilla mail)*
 
-##building C++ version:
+## Building C++ version:
 
 the c++ version is a lot better since it compiles into just one binary.
 
