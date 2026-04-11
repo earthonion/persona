@@ -20,7 +20,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "persona@earthonion.github.io",
-      "strict_min_version": "115.0"
+      "strict_min_version": "115.0",
+      "update_url": "https://earthonion.github.io/persona/updates.json"
     }
   }
 }
