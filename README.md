@@ -60,6 +60,14 @@ cd persona/cpp
 ./persona
 ```
 
+### flags
+
+```
+persona          # generate a full identity
+persona -s       # random 32-char alphanumeric string
+persona -s 64    # random 64-char alphanumeric string
+```
+
 ## todo:
 
 - use secrets for password generation

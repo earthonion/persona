@@ -2,6 +2,8 @@
 #include "variables.h"
 #include <random>
 #include <ctime>
+#include <cstdlib>
+#include <cstring>
 
 
 using namespace std;
@@ -53,7 +55,20 @@ string rand_str(const int& length, const bool& with_symbols = false){
 
 	return result;
 }
-int main(){
+int main(int argc, char** argv){
+
+	for (int i = 1; i < argc; ++i) {
+		if (strcmp(argv[i], "-s") == 0) {
+			int len = 32;
+			if (i + 1 < argc) {
+				char* end = nullptr;
+				long v = strtol(argv[i + 1], &end, 10);
+				if (end && *end == '\0' && v > 0) len = (int)v;
+			}
+			cout << rand_str(len) << endl;
+			return 0;
+		}
+	}
 
 	mt19937 rng(time(0));
 	string adj = rand_vector(adjectives, rng);
