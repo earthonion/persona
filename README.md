@@ -64,6 +64,7 @@ cd persona/cpp
 
 ```
 persona          # generate a full identity
+persona 10       # generate 10 identities
 persona -s       # random 32-char alphanumeric string
 persona -s 64    # random 64-char alphanumeric string
 ```

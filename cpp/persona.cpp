@@ -55,7 +55,35 @@ string rand_str(const int& length, const bool& with_symbols = false){
 
 	return result;
 }
+static void print_identity(mt19937& rng, const vector<string>& email_domains, const locale& loc) {
+	string adj = rand_vector(adjectives, rng);
+	string noun = rand_vector(nouns, rng);
+	string mfname = rand_vector(male_first_names, rng);
+	string ffname = rand_vector(female_first_names, rng);
+	string lastname = rand_vector(lastnames, rng);
+
+	int gender = rand_binary(rng);
+	string gender_char;
+	string fname;
+	if (gender) {
+		fname = mfname;
+		gender_char = "M";
+	} else {
+		fname = ffname;
+		gender_char = "F";
+	}
+
+	cout << "First name: " + capitalize(fname, loc) << endl;
+	cout << "Last name: " + capitalize(lastname, loc) << endl;
+	cout << "Gender: " + gender_char << endl;
+	cout << "Username: " + adj + noun << endl;
+	cout << "Email: " + rand_str(10) + "@" + rand_vector(email_domains, rng) << endl;
+	cout << "Password: " + rand_str(24, true) << endl;
+}
+
 int main(int argc, char** argv){
+
+	int count = 1;
 
 	for (int i = 1; i < argc; ++i) {
 		if (strcmp(argv[i], "-s") == 0) {
@@ -68,42 +96,23 @@ int main(int argc, char** argv){
 			cout << rand_str(len) << endl;
 			return 0;
 		}
+		char* end = nullptr;
+		long v = strtol(argv[i], &end, 10);
+		if (end && *end == '\0' && v > 0) {
+			count = (int)v;
+		}
 	}
 
 	mt19937 rng(time(0));
-	string adj = rand_vector(adjectives, rng);
-	string noun = rand_vector(nouns, rng);
-	string mfname = rand_vector(male_first_names, rng);
-	string ffname = rand_vector(female_first_names, rng);
-	string lastname = rand_vector(lastnames, rng);
-
 	vector<string> email_domains = {"grr.la","sharklasers.com",
-		"guerrillamail.info", "guerrillamail.com", 
-		"guerrillamail.biz", "guerrillamail.de", 
+		"guerrillamail.info", "guerrillamail.com",
+		"guerrillamail.biz", "guerrillamail.de",
 		"guerrillamail.net", "guerrillamail.org",
-	"guerrillamailblock.com","pokemail.net", "spam4.me"};
-
-
-	int gender = rand_binary(rng);
-	string gender_char = "";
+		"guerrillamailblock.com","pokemail.net", "spam4.me"};
 	locale loc;
-	string fname = "";
-	
-	if(gender){
-		fname = mfname;
-		gender_char = "M";
-	}
-	else{
-		fname = ffname;
-		gender_char = "F";
-	}
 
-
-	cout << "First name: " + capitalize(fname, loc) << endl;
-	cout << "Last name: " + capitalize(lastname, loc) << endl;
-	cout << "Gender: " + gender_char << endl;
-	cout << "Username: " + adj + noun << endl;
-	cout << "Email: " + rand_str(10) + "@" + rand_vector(email_domains,rng) << endl;
-	cout << "Password: " + rand_str(24, true)<< endl;
-	
+	for (int i = 0; i < count; ++i) {
+		if (i > 0) cout << "--------------------" << endl;
+		print_identity(rng, email_domains, loc);
+	}
 }
