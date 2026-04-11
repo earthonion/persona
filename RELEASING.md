@@ -1,8 +1,10 @@
 # Releasing the Firefox extension
 
-The extension is distributed from https://earthonion.github.io/persona. Each
-release is signed by Mozilla (required for Firefox to install it) and hosted
-alongside an `updates.json` so existing users auto-update.
+The extension is distributed from https://earthonion.github.io/persona.
+Each release is signed by Mozilla (required for Firefox to install it) and
+hosted on GitHub Pages. Auto-updates are handled by AMO — Firefox polls
+AMO's update service for any add-on it has installed, including unlisted
+ones, so there is no `updates.json` to maintain.
 
 ## One-time setup
 
@@ -38,14 +40,10 @@ alongside an `updates.json` so existing users auto-update.
 
 5. **Drop the signed xpi into `docs/`** as `persona-X.Y.Z.xpi`.
 
-6. **Update `docs/updates.json`** — bump the `version` and `update_link` to
-   point at the new file. Keep older entries if you want to support
-   downgrading, otherwise replace.
-
-7. **Update `docs/index.html`** — change the install link `href` and the
+6. **Update `docs/index.html`** — change the install link `href` and the
    version string in the subtitle.
 
-8. **Tag and push:**
+7. **Tag and push:**
    ```bash
    git add firefox/manifest.json docs/
    git commit -m "release vX.Y.Z"
@@ -53,9 +51,13 @@ alongside an `updates.json` so existing users auto-update.
    git push origin main --tags
    ```
 
-9. GitHub Pages redeploys automatically. Existing users pick up the update
-   on Firefox's next update check (usually within a day). New users install
-   by visiting the landing page.
+8. GitHub Pages redeploys automatically. Existing users auto-update via
+   AMO on Firefox's next update check (usually within a day). New users
+   install by visiting the landing page.
+
+> **Do not** add `update_url` to `manifest.json` — AMO rejects submissions
+> that set it, and Firefox already auto-updates unlisted add-ons through
+> AMO by default.
 
 ## Testing a release candidate before submitting to AMO
 
