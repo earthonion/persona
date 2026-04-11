@@ -64,6 +64,7 @@ async function generatePersona() {
     gender: male ? "M" : "F",
     username,
     email: `${emailLocal}@${emailDomain}`,
+    inbox: `https://www.guerrillamail.com/inbox?email_user=${emailLocal}`,
     password: randString(24, true),
   };
 }

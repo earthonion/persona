@@ -73,11 +73,15 @@ static void print_identity(mt19937& rng, const vector<string>& email_domains, co
 		gender_char = "F";
 	}
 
+	string email_local = rand_str(10);
+	string email_domain = rand_vector(email_domains, rng);
+
 	cout << "First name: " + capitalize(fname, loc) << endl;
 	cout << "Last name: " + capitalize(lastname, loc) << endl;
 	cout << "Gender: " + gender_char << endl;
 	cout << "Username: " + adj + noun << endl;
-	cout << "Email: " + rand_str(10) + "@" + rand_vector(email_domains, rng) << endl;
+	cout << "Email: " + email_local + "@" + email_domain << endl;
+	cout << "Inbox: https://www.guerrillamail.com/inbox?email_user=" + email_local << endl;
 	cout << "Password: " + rand_str(24, true) << endl;
 }
 

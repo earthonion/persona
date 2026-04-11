@@ -69,6 +69,16 @@ button:hover {
   font-size: 11px;
 }
 
+a.val {
+  color: var(--accent);
+  text-decoration: none;
+}
+a.val:hover { text-decoration: underline; }
+
+.inbox {
+  font-size: 11px;
+}
+
 .actions {
   display: flex;
   gap: 8px;

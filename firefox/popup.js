@@ -7,6 +7,9 @@ async function render() {
   document.getElementById("gender").textContent = current.gender;
   document.getElementById("username").textContent = current.username;
   document.getElementById("email").textContent = current.email;
+  const inboxEl = document.getElementById("inbox");
+  inboxEl.href = current.inbox;
+  inboxEl.textContent = "open inbox";
   document.getElementById("password").textContent = current.password;
 }
 
@@ -26,6 +29,7 @@ document.getElementById("copy").addEventListener("click", async () => {
     `Gender:     ${current.gender}\n` +
     `Username:   ${current.username}\n` +
     `Email:      ${current.email}\n` +
+    `Inbox:      ${current.inbox}\n` +
     `Password:   ${current.password}`;
   await navigator.clipboard.writeText(text);
   setStatus("Copied.");
