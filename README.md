@@ -36,22 +36,28 @@ for anon email go to https://guerrillamail.com and change the inbox ID to the on
 
 *protip: check out https://quackr.io/ for anon phone numbers (like guerrilla mail)*
 
-## Building C++ version:
+## C++ version:
 
-the c++ version is a lot better since it compiles into just one binary.
+the c++ version is faster. one-liner install:
+
+```
+git clone https://github.com/earthonion/persona/
+cd persona/cpp
+./install.sh
+```
+
+this builds it and installs `persona` to `/usr/bin/` with wordlists in `/usr/share/persona/`. then just run:
+
+```
+persona
+```
+
+to build without installing (runs from the source tree):
 
 ```
 cd persona/cpp
-chmod +x build.sh
 ./build.sh
-
-#then just run
-
 ./persona
-
-#or you can install it via
-
-cp persona /usr/bin/persona 
 ```
 
 ## todo:
