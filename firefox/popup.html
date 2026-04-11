@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Persona</h1>
+    <button id="regen" title="Generate new">↻</button>
+  </div>
+
+  <div class="fields">
+    <div class="row"><label>First</label><span id="firstName" class="val"></span></div>
+    <div class="row"><label>Last</label><span id="lastName" class="val"></span></div>
+    <div class="row"><label>Gender</label><span id="gender" class="val"></span></div>
+    <div class="row"><label>Username</label><span id="username" class="val"></span></div>
+    <div class="row"><label>Email</label><span id="email" class="val"></span></div>
+    <div class="row"><label>Password</label><span id="password" class="val mono"></span></div>
+  </div>
+
+  <div class="actions">
+    <button id="fill">Fill current page</button>
+    <button id="copy">Copy all</button>
+  </div>
+
+  <div id="status"></div>
+
+  <script src="generator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

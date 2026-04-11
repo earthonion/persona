@@ -1,0 +1,87 @@
+body {
+  font-family: system-ui, sans-serif;
+  width: 320px;
+  margin: 0;
+  padding: 12px;
+  background: #1e1e24;
+  color: #eaeaea;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+  color: #7fd6a6;
+}
+
+button {
+  background: #2d2d36;
+  color: #eaeaea;
+  border: 1px solid #3a3a44;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button:hover {
+  background: #3a3a44;
+}
+
+#regen {
+  padding: 2px 8px;
+  font-size: 16px;
+}
+
+.fields {
+  background: #26262e;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.row label {
+  color: #888;
+  flex-shrink: 0;
+}
+
+.val {
+  word-break: break-all;
+  text-align: right;
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+#status {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #7fd6a6;
+  min-height: 14px;
+  text-align: center;
+}
